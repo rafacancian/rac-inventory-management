@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "17375a76-ae87-4172-806f-b19fbb3f4705",
+		"name": "RAC Inventory Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3833389"
+	},
+	"item": [
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Oct 2024 15:27:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"moment\": \"2019-06-20T19:53:07Z\",\n        \"orderStatus\": \"WAITING_PAYMENT\",\n        \"client\": {\n            \"id\": 1,\n            \"name\": \"Rafael\",\n            \"email\": \"rafael.test@gmail.com\",\n            \"phone\": \"981488231\",\n            \"password\": \"123456\"\n        },\n        \"items\": [\n            {\n                \"quantity\": 2,\n                \"price\": 41000,\n                \"subTotal\": 82000,\n                \"product\": {\n                    \"id\": 1,\n                    \"name\": \"HB20\",\n                    \"description\": \"Carro da Hyundai.\",\n                    \"price\": 41000,\n                    \"imgUrl\": \"\",\n                    \"categories\": [\n                        {\n                            \"id\": 1,\n                            \"name\": \"Hatch\"\n                        }\n                    ]\n                }\n            },\n            {\n                \"quantity\": 1,\n                \"price\": 65000,\n                \"subTotal\": 65000,\n                \"product\": {\n                    \"id\": 3,\n                    \"name\": \"Ford Focus\",\n                    \"description\": \"Carro da Ford.\",\n                    \"price\": 65000,\n                    \"imgUrl\": \"\",\n                    \"categories\": [\n                        {\n                            \"id\": 1,\n                            \"name\": \"Hatch\"\n                        }\n                    ]\n                }\n            }\n        ],\n        \"payment\": {\n            \"id\": 1,\n            \"moment\": \"2019-06-20T21:00:07Z\"\n        },\n        \"total\": 147000\n    },\n    {\n        \"id\": 2,\n        \"moment\": \"2019-07-21T03:42:10Z\",\n        \"orderStatus\": \"PAID\",\n        \"client\": {\n            \"id\": 1,\n            \"name\": \"Rafael\",\n            \"email\": \"rafael.test@gmail.com\",\n            \"phone\": \"981488231\",\n            \"password\": \"123456\"\n        },\n        \"items\": [\n            {\n                \"quantity\": 2,\n                \"price\": 65000,\n                \"subTotal\": 130000,\n                \"product\": {\n                    \"id\": 3,\n                    \"name\": \"Ford Focus\",\n                    \"description\": \"Carro da Ford.\",\n                    \"price\": 65000,\n                    \"imgUrl\": \"\",\n                    \"categories\": [\n                        {\n                            \"id\": 1,\n                            \"name\": \"Hatch\"\n                        }\n                    ]\n                }\n            }\n        ],\n        \"payment\": null,\n        \"total\": 130000\n    },\n    {\n        \"id\": 3,\n        \"moment\": \"2019-07-22T15:21:00Z\",\n        \"orderStatus\": \"PAID\",\n        \"client\": {\n            \"id\": 2,\n            \"name\": \"Cancian\",\n            \"email\": \"cancian.test@gmail.com\",\n            \"phone\": \"981488232\",\n            \"password\": \"123456\"\n        },\n        \"items\": [\n            {\n                \"quantity\": 2,\n                \"price\": 120000,\n                \"subTotal\": 240000,\n                \"product\": {\n                    \"id\": 5,\n                    \"name\": \"Audi A3\",\n                    \"description\": \"Carro da Audi.\",\n                    \"price\": 120000,\n                    \"imgUrl\": \"\",\n                    \"categories\": [\n                        {\n                            \"id\": 3,\n                            \"name\": \"Conversivel\"\n                        }\n                    ]\n                }\n            }\n        ],\n        \"payment\": null,\n        \"total\": 240000\n    },\n    {\n        \"id\": 4,\n        \"moment\": \"2019-07-23T10:01:12Z\",\n        \"orderStatus\": \"WAITING_PAYMENT\",\n        \"client\": {\n            \"id\": 2,\n            \"name\": \"Cancian\",\n            \"email\": \"cancian.test@gmail.com\",\n            \"phone\": \"981488232\",\n            \"password\": \"123456\"\n        },\n        \"items\": [],\n        \"payment\": null,\n        \"total\": 0\n    },\n    {\n        \"id\": 5,\n        \"moment\": \"2019-07-24T17:45:23Z\",\n        \"orderStatus\": \"WAITING_PAYMENT\",\n        \"client\": {\n            \"id\": 1,\n            \"name\": \"Rafael\",\n            \"email\": \"rafael.test@gmail.com\",\n            \"phone\": \"981488231\",\n            \"password\": \"123456\"\n        },\n        \"items\": [],\n        \"payment\": null,\n        \"total\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Oct 2024 15:28:56 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"moment\": \"2019-06-20T19:53:07Z\",\n    \"orderStatus\": \"WAITING_PAYMENT\",\n    \"client\": {\n        \"id\": 1,\n        \"name\": \"Rafael\",\n        \"email\": \"rafael.test@gmail.com\",\n        \"phone\": \"981488231\",\n        \"password\": \"123456\"\n    },\n    \"items\": [\n        {\n            \"quantity\": 2,\n            \"price\": 41000,\n            \"subTotal\": 82000,\n            \"product\": {\n                \"id\": 1,\n                \"name\": \"HB20\",\n                \"description\": \"Carro da Hyundai.\",\n                \"price\": 41000,\n                \"imgUrl\": \"\",\n                \"categories\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Hatch\"\n                    }\n                ]\n            }\n        },\n        {\n            \"quantity\": 1,\n            \"price\": 65000,\n            \"subTotal\": 65000,\n            \"product\": {\n                \"id\": 3,\n                \"name\": \"Ford Focus\",\n                \"description\": \"Carro da Ford.\",\n                \"price\": 65000,\n                \"imgUrl\": \"\",\n                \"categories\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Hatch\"\n                    }\n                ]\n            }\n        }\n    ],\n    \"payment\": {\n        \"id\": 1,\n        \"moment\": \"2019-06-20T21:00:07Z\"\n    },\n    \"total\": 147000\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Oct 2024 15:29:41 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"HB20\",\n        \"description\": \"Carro da Hyundai.\",\n        \"price\": 41000,\n        \"imgUrl\": \"\",\n        \"categories\": [\n            {\n                \"id\": 1,\n                \"name\": \"Hatch\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Onix\",\n        \"description\": \"Carro da Chevrolet.\",\n        \"price\": 43200,\n        \"imgUrl\": \"\",\n        \"categories\": [\n            {\n                \"id\": 1,\n                \"name\": \"Hatch\"\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Ford Focus\",\n        \"description\": \"Carro da Ford.\",\n        \"price\": 65000,\n        \"imgUrl\": \"\",\n        \"categories\": [\n            {\n                \"id\": 1,\n                \"name\": \"Hatch\"\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Jeep Renegate\",\n        \"description\": \"Carro da Jeep.\",\n        \"price\": 71500,\n        \"imgUrl\": \"\",\n        \"categories\": [\n            {\n                \"id\": 2,\n                \"name\": \"Off Road\"\n            }\n        ]\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Audi A3\",\n        \"description\": \"Carro da Audi.\",\n        \"price\": 120000,\n        \"imgUrl\": \"\",\n        \"categories\": [\n            {\n                \"id\": 3,\n                \"name\": \"Conversivel\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "getAllCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Oct 2024 15:31:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Hatch\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Off Road\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Conversivel\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/categories/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categories",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Oct 2024 15:31:38 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Hatch\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Oct 2024 15:32:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Rafael\",\n        \"email\": \"rafael.test@gmail.com\",\n        \"phone\": \"981488231\",\n        \"password\": \"123456\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Cancian\",\n        \"email\": \"cancian.test@gmail.com\",\n        \"phone\": \"981488232\",\n        \"password\": \"123456\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
